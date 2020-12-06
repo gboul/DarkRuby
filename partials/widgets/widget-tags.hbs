@@ -1,0 +1,36 @@
+<div class="widget widget-tags">
+   <a class="widget-link" href="/">
+      <h4 class="widget-title">
+         <span class="widget-name">Tags</span>
+         <span class="widget-action">View all</span>
+      </h4>
+   </a>
+   {{#if tag }}
+      {{#get "tags" limit="all" include="count.posts" filter="id:-{{tag.id}}" }}
+         <div class="tag-feed">
+            {{#foreach tags}}
+               <div class="tag">
+                  <a class="tag-link" href="{{url}}">
+                     <span class="tag-name">{{name}}</span>
+                     <span class="tag-count">{{count.posts}}</span>
+                  </a>
+               </div>
+            {{/foreach}}
+         </div>
+      {{/get}}
+   {{else}}
+      {{#get "tags" limit="all" include="count.posts"}}
+
+         <div class="tag-feed">
+            {{#foreach tags}}
+               <div class="tag">
+                  <a class="tag-link" href="{{url}}">
+                     <span class="tag-name">{{name}}</span>
+                     <span class="tag-count">{{count.posts}}</span>
+                  </a>
+               </div>
+            {{/foreach}}
+         </div>
+      {{/get}}
+   {{/if}}
+</div>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+
+<head>
+   
+   {{!-- Document Settings --}}
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />   
+   
+    {{!-- Base Meta --}}   
+    <title>{{meta_title}}</title>
+   
+    {{!-- Styles'n'Scripts --}}      
+    <link rel="stylesheet" href="{{asset "built/screen.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "built/theme.css"}}" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.0/tocbot.min.css" integrity="sha512-SFw7k74K3983tyOlJIHa8atr9Ppef3Kix5cmifwzU7ZdtU2E0FRuOVRtd3ENpMJ8sNCie5hlb/0j23efcdQJXA==" crossorigin="anonymous" />   
+   
+<!--    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i%7CDosis:600,700&amp;subset=latin-ext">-->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cherry+Cream+Soda&display=swap">
+
+    {{ghost_head}}
+</head>
+
+<body class="{{body_class}}{{{block "body_class"}}}">
+    <div class="site">
+        {{> header}}
+        <div class="site-content">
+            {{{body}}}
+        </div>
+        {{> footer}}
+    </div>
+
+    {{> off-canvas}}
+    {{> pswp}}
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+        </script>
+   <script src="{{asset "built/main.min.js"}}"></script>
+   
+   {{!-- Start of My Blog: scripts --}}
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js" integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA==" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-Q3qGP1uJL/B0sEmu57PKXjCirgPKMbg73OLRbTJ6lfHCVU5zkHqmcTI5EV2fSoPV1MHdKsCBE7m/aS6q0pPjRQ==" crossorigin="anonymous"></script>
+   <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.0/tocbot.min.js" integrity="sha512-oD3xGN8YTxenx6tdS4D/RKqO4OtORBQtAb2/FseM17GGMIi6jMwKUBc8duX4A5RwMOGGXoFBZrsqbOk8GpXFgQ==" crossorigin="anonymous"></script>   
+   <script type="text/javascript">
+      tocbot.init({
+         tocSelector: '.post-toc',
+         contentSelector: '.post-content',
+         hasInnerContainers: true,
+//         positionFixedClass: '.sidebar-column',      
+      });
+      
+      mermaid.initialize({
+         startOnLoad: true,
+         theme: 'dark'
+      });
+   </script>      
+   {{!-- End of My Blog: scripts --}}    
+    {{> facebook}}
+
+    {{{block "scripts"}}}
+
+    {{ghost_foot}}
+</body>
+
+</html>

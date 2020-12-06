@@ -1,0 +1,37 @@
+{{!< default}}
+
+<div class="container">
+   <div class="row">
+      <div class="content-column col-lg-9">
+         <div class="content-area">
+            <main class="site-main">
+               {{#post}}
+                  <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single">
+                     {{> post-header tag="h1" hide_link=true hide_tag=true}}
+                     <div class="post-meta">
+                        <time class="post-meta-date" datetime="{{date format="YYYY-MM-DD"}}">
+                           {{date published_at}}
+                        </time>
+                        <span class="post-meta-length">{{reading_time}}</span>
+                     </div>
+                     {{> post-media}}
+                     <div class="post-wrapper">                       
+                        <div class="post-content u-text-format">
+                           {{content}}
+                        </div>
+                        {{> tags}}
+                        {{> share}}
+                     </div>
+                  </article>
+                  {{> author}}
+                  {{> post-navigation}}
+                  {{> comment}}
+               {{/post}}
+            </main>
+         </div>
+      </div>
+      <div class="sidebar-column col-lg-3 hidden-xs hidden-sm hidden-md">
+         {{> widgets/widgets}}
+      </div>      
+   </div>
+</div>
