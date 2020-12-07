@@ -1,13 +1,17 @@
 # Ruby Dark Theme for Ghost Blogging System
 This theme is based on the Ruby Theme. 
 
-## Theme Features
+### Theme Features
 - Dark Theme
 - Custom CSS is added in a seperate theme.css file
 - Prism support with autoload
 - Mermaid js support for Diagrams and flows
 - Tags widget is used as a secondary navigation
 - Sitemap template to be used with Google Search
+
+## Instalation
+1. Download this theme
+2. Log into Ghost, and go to the `Design` settings area to upload the zip file
 
 
 ### Prism Support
