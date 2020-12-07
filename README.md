@@ -1,3 +1,41 @@
+# Ruby Dark Theme for Ghost Blogging System
+This theme is based on the Ruby Theme. 
+
+## Theme Features
+- Dark Theme
+- Custom CSS is added in a seperate theme.css file
+- Prism support with autoload
+- Mermaid js support for Diagrams and flows
+- Tags widget is used as a secondary navigation
+- Sitemap template to be used with Google Search
+
+
+### Prism Support
+The javascript link are added into the theme but the not the style. You can select your prism style at the prism site and add it into Code Injection under the Site Header section.
+
+The prism theme used with my theme is the following:
+```
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-tomorrow.min.css" integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg==" crossorigin="anonymous" />
+```
+
+### sitemap.xml
+In order to produce the sitemap.xml, you need to create a template, which this theme provide and add the corresponding route in your route.yaml file. For more info refer to this guide https://ghost.org/tutorials/create-a-google-news-sitemap/
+
+Download the route.yaml file and under the routes: add the following:
+
+```
+routes:
+  /sitemap/:
+    template: sitemap
+    content_type: text/xml
+
+```
+Upload the **routes.yaml** file to your site.
+
+You can view the sitemap XML, by entering **/sitemap** at the you blog, e.g. http(s)://yourdomain/sitemap
+
+
+
 # Ruby
 
 A multi-column theme with a unique card layout. Share your posts with contemporary style. Completely free and fully responsive, released under the MIT license.
