@@ -75,6 +75,13 @@ code {
    color: rgba(255, 255, 255, 0.75);
 }
 
+.site-header span.logo-subtext{
+    font-size: small;
+    font-style: italic;
+    display: flow-root;
+    text-align: end;
+}
+
 .site-content {
    padding-top: 80px;
    overflow: hidden;

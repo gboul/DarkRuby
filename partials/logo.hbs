@@ -2,6 +2,9 @@
     {{#if @site.logo}}
         <img class="logo-image" src="{{@site.logo}}" alt="{{@site.title}}">
     {{else}}
+         <span class="logo-text-wrapper">
         <span class="logo-text">{{@site.title}}</span>
+           <span class="logo-subtext">{{@site.description}}</span>
+      </span>
     {{/if}}
 </a>
